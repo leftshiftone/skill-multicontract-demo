@@ -7,8 +7,6 @@ depending on the type of the incoming message.
 A contract must have a clear and definite boundary. This might either be achieved using different
 contract files or using namespaces.
 
-_**INFO:**_ _Either way namespaces are used under the hood._
-
 **Using multiple contract files**
 
 Within the `skill.yml` file you may specify more than one contract file:
@@ -95,7 +93,9 @@ namespace `second` {
     }
 }
 ```
-INFO: Please be aware of the grave accent (`)
+**INFO:** _Please be aware of the grave accent (`)_
+
+**NOTE:** It is ofcourse possible to mix the implementation of custom and default contracts.
 
 The second approach of defining multiple contracts is using a single contract file but specifying the boundary
 namespaces yourself:
@@ -191,7 +191,7 @@ To do this the response map/dictionary must be constructed accordingly using the
 `
 
 
-**_INFO:_** _This might change in future releases_
+**INFO:** _This might change in future releases_
 
 For our concrete example a response to a message from the namespace `second` might look like this:
 
