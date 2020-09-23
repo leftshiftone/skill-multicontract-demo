@@ -1,0 +1,53 @@
+namespace intents {
+    namespace incoming {
+        class Request {
+            @NotBlank
+            identityId: string
+        }
+    }
+
+    namespace outgoing {
+        class Response {
+          @NotBlank
+          qualifiers: [string]
+        }
+    }
+}
+
+namespace echo {
+    namespace incoming {
+        class Request {
+            @NotBlank
+            text: string
+        }
+    }
+
+    namespace outgoing {
+        class Response {
+          @NotBlank
+          response: string
+        }
+    }
+}
+
+namespace adder {
+   namespace incoming {
+        class Request {
+            @NotBlank
+            @GreaterThan(0)
+            @LowerThan(10000)
+            a: int
+            @NotBlank
+            @GreaterThan(0)
+            @LowerThan(10000)
+            b: int
+        }
+    }
+
+    namespace outgoing {
+        class Response {
+          @NotBlank
+          result: int
+        }
+    }
+}
